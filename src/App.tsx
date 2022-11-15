@@ -1,3 +1,6 @@
-const App = () => <h1 className='text-3xl font-bold underline text-rose-500'>Hello world!</h1>
+import { RouterProvider } from 'react-router'
+import history from './history'
+
+const App = () => <RouterProvider router={history} />
 
 export default App
