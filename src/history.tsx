@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
+import Dashboard from './pages/Dashboard'
 
 const history = createBrowserRouter([
   {
     path: '/',
-    element: <h1 className='text-3xl font-bold text-rose-500 underline'>Hello world!</h1>,
+    element: <Dashboard />,
   },
   {
     path: '/my-tasks',
