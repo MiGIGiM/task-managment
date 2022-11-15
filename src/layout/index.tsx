@@ -1,3 +1,4 @@
+import MasterNavBar from '../components/MasterNavBar'
 import Sidebar from '../components/Sidebar'
 
 const Layout = () => (
@@ -5,7 +6,9 @@ const Layout = () => (
     <div className='m-8 w-2/12'>
       <Sidebar />
     </div>
-    <div className='w-full'>ola</div>
+    <div className='mt-8 w-full'>
+      <MasterNavBar />
+    </div>
   </div>
 )
 
