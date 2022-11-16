@@ -6,7 +6,7 @@ const Layout = () => (
     <div className='m-8 w-2/12'>
       <Sidebar />
     </div>
-    <div className='mt-8 w-full'>
+    <div className='mt-8 mr-8 w-full'>
       <MasterNavBar />
     </div>
   </div>
