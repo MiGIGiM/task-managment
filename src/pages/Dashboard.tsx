@@ -4,13 +4,13 @@ import Layout from '../layout'
 import Toggle from '../components/Toggle'
 
 const Dashboard = () => {
-  const [sel, setSel] = useState('columns')
+  const [option, setOption] = useState('columns')
 
   return (
     <Layout>
       <section>
         <div className='flex justify-between'>
-          <Toggle selected={sel} setSelected={setSel} />
+          <Toggle selected={option} setSelected={setOption} />
           <PlusButton />
         </div>
       </section>
