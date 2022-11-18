@@ -1,33 +1,23 @@
 import { FC } from 'react'
 
-type TAvatarSize = 'sm' | 'md' | 'lg'
+export enum EAvatarSize {
+  sm = 'w-8 h-8',
+  md = 'h-10 w-10',
+  lg = 'w-12 h-12',
+}
 
 type TAvatarProps = {
   src: string
-  size: TAvatarSize
+  size: EAvatarSize
 }
 
-const Avatar: FC<TAvatarProps> = ({ src, size }) => {
-  const getSize = (): string => {
-    switch (size) {
-      case 'sm':
-        return 'w-8 h-8'
-      case 'lg':
-        return 'w-12 h-12'
-      case 'md':
-        return 'h-10 w-10'
-      default:
-        return 'h-5 w-5'
-    }
-  }
-  return (
-    <div
-      className={`my-3 ${getSize()} rounded-full bg-cover bg-center stroke-2`}
-      style={{
-        backgroundImage: `url('${src}')`,
-      }}
-    />
-  )
-}
+const Avatar: FC<TAvatarProps> = ({ src, size }) => (
+  <div
+    className={`my-3 ${size} rounded-full bg-cover bg-center stroke-2`}
+    style={{
+      backgroundImage: `url('${src}')`,
+    }}
+  />
+)
 
 export default Avatar
