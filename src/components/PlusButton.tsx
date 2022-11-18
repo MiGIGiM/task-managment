@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { PlusIcon } from '@heroicons/react/24/outline'
+import Button, { EButtonColors } from './Button'
 
 const PlusButton = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
-      <button type='button' onClick={() => setIsOpen(true)} className='rounded-lg bg-primary-4 p-3'>
-        <PlusIcon className='w-5 stroke-2 text-neutral-1' />
-      </button>
+      <Button
+        type='button'
+        onClick={() => setIsOpen(true)}
+        btnText={<PlusIcon className='w-5 stroke-2 text-neutral-1' />}
+        disabled={false}
+        color={EButtonColors.primary}
+      />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='relative z-50'>
         <div className='fixed inset-0 bg-black/30' aria-hidden='true' />
         <div className='fixed inset-0 flex items-center justify-center p-4'>

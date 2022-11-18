@@ -38,7 +38,19 @@ module.exports = {
         'neutral-3': '#393D41',
         'neutral-4': '#2c2f33',
         'neutral-5': '#222528',
-        'primary-4': '#da584b'
+        'primary-1': '#f4ccc8',
+        'primary-2': '#eba59e',
+        'primary-3': '#e27d73',
+        'primary-4': '#da584b',
+        'secondary-1': '#c8e1bc',
+        'secondary-2': '#aad199',
+        'secondary-3': '#8dc275',
+        'secondary-4': '#70b252',
+        'tertiary-1': '#f9eed7',
+        'tertiary-2': '#f2daab',
+        'tertiary-3': '#ebc77f',
+        'tertiary-4': '#e5b454'
+
       }
     },
   },
