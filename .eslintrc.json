@@ -48,6 +48,7 @@
         "react/function-component-definition": ["error", {
             "namedComponents": "arrow-function",
             "unnamedComponents": "arrow-function"
-        }]
+        }],
+        "react/button-has-type": "off"
     }
 }

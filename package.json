@@ -13,11 +13,14 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
     "@tailwindcss/forms": "^0.5.3",
     "daisyui": "^2.39.1",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.4",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3"
   },
