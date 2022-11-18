@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useForm } from 'react-hook-form'
 import { MagnifyingGlassIcon, XCircleIcon, BellIcon } from '@heroicons/react/24/outline'
-import Avatar from './Avatar'
+import Avatar, { EAvatarSize } from './Avatar'
 
 type TMasterNavBarInput = {
   search: string
@@ -48,7 +48,7 @@ const MasterNavBar = () => {
           <XCircleIcon className='h-5 w-5 stroke-2 text-neutral-2 transition-colors duration-150 group-hover:text-primary-4 ' />
         </button>
         <BellIcon className='w-5 cursor-pointer text-neutral-2 transition-colors duration-100 hover:text-primary-4' />
-        <Avatar src='/assets/img/profile-placeholder.png' size='md' />
+        <Avatar src='/assets/img/profile-placeholder.png' size={EAvatarSize.md} />
       </span>
     </div>
   )
