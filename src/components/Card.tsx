@@ -4,7 +4,7 @@ import Button, { EButtonColors } from './Button'
 import Tag, { ETagColor } from './Tag'
 
 const Card = () => (
-  <div className='max-w-sm space-y-5 rounded-lg bg-neutral-4 p-4'>
+  <div className='w-80 max-w-sm space-y-5 rounded-lg bg-neutral-4 p-4'>
     <div className='flex items-center justify-between'>
       <p className='text-[18px] font-semibold text-neutral-1'>Twitter</p>
       <Button

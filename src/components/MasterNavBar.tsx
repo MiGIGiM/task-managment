@@ -15,10 +15,6 @@ const MasterNavBar = () => {
 
   const watchSearch = watch('search', '')
 
-  const formValues = getValues()
-
-  console.log(formValues)
-
   const onSubmit = (data: TMasterNavBarInput) => console.log(data)
 
   return (

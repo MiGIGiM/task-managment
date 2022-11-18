@@ -25,7 +25,7 @@ const navItems: INavItem[] = [
 ]
 
 const Sidebar = () => (
-  <aside className='h-full w-full rounded-3xl bg-neutral-4 py-4'>
+  <aside className='h-screen w-full rounded-3xl bg-neutral-4 py-4'>
     <img src='/assets/svg/ravn_logo.svg' alt='logo' className='mx-auto' />
     <nav className='mt-12 text-neutral-2'>
       {navItems.map((nav) => (
