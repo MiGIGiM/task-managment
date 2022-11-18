@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react'
 
 export enum EButtonColors {
-  primary = 'bg-primary-4 active:bg-primary-3 hover:bg-primary-2 disabled:bg-primary-2',
-  secondary = 'bg-transparent active:bg-neutral-2 hover:bg-neutral-2 disabled:text-neutral-2',
+  primary = 'bg-primary-4 active:bg-primary-3 hover:bg-primary-2 disabled:bg-primary-2 text-neutral-1',
+  secondary = 'bg-transparent active:bg-neutral-2 hover:bg-neutral-2 disabled:text-neutral-2 text-neutral-1',
 }
 
 type TButtonProps = {
@@ -18,7 +18,7 @@ const Button: FC<TButtonProps> = ({ type, onClick, color, btnText, disabled }) =
     type={type}
     onClick={onClick}
     disabled={disabled}
-    className={`${color} min-w-[40px] rounded-lg p-2 text-base text-neutral-1`}
+    className={`${color} min-w-[40px] rounded-lg p-2 text-base`}
   >
     {btnText}
   </button>
