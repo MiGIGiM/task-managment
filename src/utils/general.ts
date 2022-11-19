@@ -30,8 +30,6 @@ export const getDateString = (date: Date): string => {
 
   if (dt === today) return 'TODAY'
 
-  console.log({ yesterday, dt })
-
   if (
     yesterday.toLocaleDateString('en-US', {
       day: 'numeric',
