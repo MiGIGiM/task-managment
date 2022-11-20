@@ -9,7 +9,7 @@ type TMasterNavBarInput = {
 }
 
 const MasterNavBar = () => {
-  const { register, handleSubmit, setValue, getValues, watch } = useForm<TMasterNavBarInput>({
+  const { register, handleSubmit, setValue, watch } = useForm<TMasterNavBarInput>({
     mode: 'onTouched',
   })
 
