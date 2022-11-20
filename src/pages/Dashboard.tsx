@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import PlusButton from '../components/PlusButton'
 import Layout from '../layout'
 import Toggle from '../components/Toggle'
 import TaskColumn from '../components/TaskColumn'
-import { EStatus, GET_TASK, TTask, TTaskArr, TTaskColumns } from '../services/task'
+import { EStatus, GET_TASK, TTaskArr, TTaskColumns } from '../services/task'
 
 const Dashboard = () => {
   const [option, setOption] = useState('columns')
@@ -33,6 +33,8 @@ const Dashboard = () => {
     }
   }, [data])
 
+  if (loading) return <p>Loading...</p>
+
   return (
     <Layout>
       <section className='space-y-5'>
@@ -40,7 +42,7 @@ const Dashboard = () => {
           <Toggle selected={option} setSelected={setOption} />
           <PlusButton />
         </div>
-        <div className='grid grid-cols-5 gap-28 overflow-x-auto'>
+        <div className='grid grid-cols-5 overflow-x-auto'>
           {tasks.todo.length > 0 && <TaskColumn title='To Do' tasks={tasks.todo} />}
           {tasks.in_progress.length > 0 && (
             <TaskColumn title='In Progress' tasks={tasks.in_progress} />

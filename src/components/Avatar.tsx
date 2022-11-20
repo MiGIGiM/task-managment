@@ -15,7 +15,7 @@ const Avatar: FC<TAvatarProps> = ({ src, size }) => (
   <div
     className={`my-3 ${size} rounded-full bg-cover bg-center stroke-2`}
     style={{
-      backgroundImage: `url('${src}')`,
+      backgroundImage: `url('${src || '/assets/img/profile-placeholder.png'}')`,
     }}
   />
 )
