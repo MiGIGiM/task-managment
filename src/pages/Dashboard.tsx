@@ -33,10 +33,8 @@ const Dashboard = () => {
     }
   }, [data])
 
-  if (loading) return <p>Loading...</p>
-
   return (
-    <Layout>
+    <Layout loading={loading}>
       <section className='space-y-5'>
         <div className='flex justify-between'>
           <Toggle selected={option} setSelected={setOption} />

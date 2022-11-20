@@ -14,14 +14,6 @@ const navItems: INavItem[] = [
       <Squares2X2Icon className='h-5 w-5 stroke-2  group-first/active:text-primary-4 group-hover:text-primary-4' />
     ),
   },
-  {
-    id: 2,
-    to: '/my-tasks',
-    text: 'My Tasks',
-    icon: (
-      <Bars3Icon className='h-5 w-5 stroke-2 group-first/active:text-primary-4 group-hover:text-primary-4' />
-    ),
-  },
 ]
 
 const Sidebar = () => (

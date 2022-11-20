@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
+import NotFound from './components/NotFound'
 
 const history = createBrowserRouter([
   {
@@ -7,12 +8,8 @@ const history = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: '/my-tasks',
-    element: <p>my tasks</p>,
-  },
-  {
     path: '*',
-    element: <p>error</p>,
+    element: <NotFound className='h-screen bg-neutral-5' />,
   },
 ])
 
