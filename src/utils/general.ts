@@ -1,18 +1,16 @@
-import { ETagColor } from '../components/Tag'
-
-export const getTagColor = (tag: string): ETagColor => {
+export const getTagColor = (tag: string) => {
   switch (tag) {
     case 'ANDROID':
     case 'NODE_JS':
-      return ETagColor.green
+      return 'bg-secondary-4/10 fill-secondary-4 text-secondary-4'
     case 'REACT':
-      return ETagColor.blue
+      return 'bg-[#2F61BF]/10 fill-[#2F61BF] text-[#2F61BF]'
     case 'RAILS':
     case 'YESTERDAY':
-      return ETagColor.red
+      return 'bg-primary-4/10 fill-primary-4 text-primary-4'
     case 'IOS':
     default:
-      return ETagColor.base
+      return 'bg-neutral-2/10 fill-neutral-1 text-neutral-1'
   }
 }
 
@@ -20,11 +18,6 @@ export const getDateString = (date: Date): string => {
   const dt = new Date(date)
   const today = new Date()
   const yesterday = new Date(today)
-  const options = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }
 
   yesterday.setDate(yesterday.getDate() - 1)
 

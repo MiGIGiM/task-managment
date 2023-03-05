@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { PlusIcon } from '@heroicons/react/24/outline'
+import TaskModal from '@components/Tasks/TaskModal'
 import Button, { EButtonColors } from './Button'
-import TaskModal from './TaskModal'
 
 const PlusButton = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +16,12 @@ const PlusButton = () => {
         disabled={false}
         color={EButtonColors.primary}
       />
-      <TaskModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <TaskModal
+        isModalOPen={isOpen}
+        openModal={() => setIsOpen(true)}
+        closeModal={() => setIsOpen(false)}
+        task={undefined}
+      />
     </>
   )
 }

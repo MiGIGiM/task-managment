@@ -1,15 +1,20 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
-import NotFound from './components/NotFound'
+import { AppContextProvider } from '@ctx/AppContext'
+import Dashboard from '@pages/Dashboard'
+import NotFound from '@pages/NotFound'
 
 const history = createBrowserRouter([
   {
     path: '/',
-    element: <Dashboard />,
+    element: (
+      <AppContextProvider>
+        <Dashboard />
+      </AppContextProvider>
+    ),
   },
   {
     path: '*',
-    element: <NotFound className='h-screen bg-neutral-5' />,
+    element: <NotFound />,
   },
 ])
 

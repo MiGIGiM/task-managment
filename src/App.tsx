@@ -1,7 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 import { RouterProvider } from 'react-router'
 import history from './history'
-import client from './services'
+import client from './gql/client'
 
 const App = () => (
   <ApolloProvider client={client}>

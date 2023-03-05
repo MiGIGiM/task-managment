@@ -1,5 +1,3 @@
-import { gql } from '@apollo/client'
-
 enum EPointEstimate {
   EIGHT = '8 Pts',
   FOUR = '4 Pts',
@@ -55,19 +53,3 @@ export type TTaskFilters = {
   status: EStatus
   tags: ETaskTag[]
 }
-
-export const GET_TASK = gql`
-  query getTasks($input: FilterTaskInput!) {
-    tasks(input: $input) {
-      name
-      id
-      status
-      assignee {
-        avatar
-      }
-      dueDate
-      pointEstimate
-      tags
-    }
-  }
-`

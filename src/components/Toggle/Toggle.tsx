@@ -15,6 +15,7 @@ const Toggle: FC<TToggleProps> = ({ selected, setSelected }) => (
       } rounded-lg border p-2 transition-all`}
       onClick={() => setSelected('list')}
     >
+      <p className='sr-only'>List view</p>
       <Bars3Icon
         className={`h-6 w-6 stroke-2 ${
           selected !== 'columns' ? 'text-primary-4' : 'text-neutral-1'
@@ -28,6 +29,8 @@ const Toggle: FC<TToggleProps> = ({ selected, setSelected }) => (
       } rounded-lg border p-2 transition-all`}
       onClick={() => setSelected('columns')}
     >
+      <p className='sr-only'>Column view</p>
+
       <Squares2X2Icon
         className={`h-6 w-6 stroke-2 ${
           selected === 'columns' ? 'text-primary-4' : 'text-neutral-1'

@@ -1,4 +1,4 @@
-import { Squares2X2Icon, Bars3Icon } from '@heroicons/react/24/outline'
+import { Squares2X2Icon } from '@heroicons/react/24/outline'
 import SidebarItem, { TSideBarIitem } from './SidebarItem'
 
 export interface INavItem extends TSideBarIitem {
