@@ -18,6 +18,7 @@ import { TUsers } from '@consts/users'
 import { gql, Reference, useMutation } from '@apollo/client'
 import { ADD_TASK } from '@gql-local/mutations'
 import { TTask } from '@consts/tasks'
+import { getDateString } from 'utils/general'
 
 export interface CreateTask {
   assigne: TUsers
@@ -184,7 +185,6 @@ const TaskModal: FC<Props> = ({ closeModal, isModalOPen }) => {
                             selected={field.value}
                             onChange={field.onChange}
                             value={field.value?.toString()}
-                            calendarClassName='bg-neutral-4'
                           />
                         )}
                       />
