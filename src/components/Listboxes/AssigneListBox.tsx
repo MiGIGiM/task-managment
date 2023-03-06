@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { AppContext } from '@ctx/AppContext'
 import { Listbox, Transition } from '@headlessui/react'
 import { UserIcon } from '@heroicons/react/20/solid'
 import { FC, Fragment, useContext } from 'react'
 import { useController, UseControllerProps } from 'react-hook-form'
-import { TUsers } from '../../services/users'
 import Avatar, { EAvatarSize } from '../Avatar/Avatar'
 
 type Props = {

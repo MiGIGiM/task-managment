@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable react/jsx-props-no-spreading */
 import { Dialog, Transition } from '@headlessui/react'
 import { FC, Fragment } from 'react'
@@ -9,10 +14,10 @@ import { LabelListBox } from '@components/Listboxes'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { CalendarIcon } from '@heroicons/react/24/solid'
-import { TUsers } from 'services/users'
+import { TUsers } from '@consts/users'
 import { gql, Reference, useMutation } from '@apollo/client'
 import { ADD_TASK } from '@gql-local/mutations'
-import { TTask } from 'services/task'
+import { TTask } from '@consts/tasks'
 
 export interface CreateTask {
   assigne: TUsers
@@ -24,14 +29,12 @@ export interface CreateTask {
 }
 
 type Props = {
-  task: CreateTask | undefined
   isModalOPen: boolean
-  openModal: () => void
   closeModal: () => void
 }
 
-const TaskModal: FC<Props> = ({ task, openModal, closeModal, isModalOPen }) => {
-  const { control, handleSubmit, register, reset, setValue } = useForm<Partial<CreateTask>>({
+const TaskModal: FC<Props> = ({ closeModal, isModalOPen }) => {
+  const { control, handleSubmit, register, reset } = useForm<Partial<CreateTask>>({
     defaultValues: {
       name: '',
       pointEstimate: '',
@@ -42,7 +45,7 @@ const TaskModal: FC<Props> = ({ task, openModal, closeModal, isModalOPen }) => {
     },
   })
 
-  const [createTask, { loading }] = useMutation(ADD_TASK, {
+  const [createTask] = useMutation(ADD_TASK, {
     update(cache, { data: { createTask: newTask } }) {
       cache.modify({
         fields: {
@@ -77,7 +80,7 @@ const TaskModal: FC<Props> = ({ task, openModal, closeModal, isModalOPen }) => {
     },
   })
 
-  const onSubmit = async (data: Partial<CreateTask>) => {
+  const onSubmit = async (data: Partial<CreateTask>): Promise<void> => {
     try {
       const body = {
         variables: {
@@ -99,8 +102,6 @@ const TaskModal: FC<Props> = ({ task, openModal, closeModal, isModalOPen }) => {
       console.error(err)
     }
   }
-
-  const onErrors = () => console.log('errors')
 
   return (
     <Transition appear show={isModalOPen} as={Fragment}>
@@ -136,7 +137,7 @@ const TaskModal: FC<Props> = ({ task, openModal, closeModal, isModalOPen }) => {
               leaveTo='opacity-0 scale-95'
             >
               <Dialog.Panel className='mx-auto h-full w-full bg-neutral-3 p-8 lg:h-auto lg:max-w-2xl lg:rounded-xl lg:p-4 lg:shadow-xl'>
-                <form onSubmit={handleSubmit(onSubmit, onErrors)} className='text-neutral-1'>
+                <form onSubmit={handleSubmit(onSubmit)} className='text-neutral-1'>
                   <input
                     type='text'
                     className='w-full rounded-lg border-none bg-transparent focus:border-dashed focus:border-violet-600 focus:ring-0 focus-visible:outline-0 '

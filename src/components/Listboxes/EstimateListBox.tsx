@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { EstimateIcon } from '@components/Icons'
 import { Listbox, Transition } from '@headlessui/react'
 import { FC, Fragment } from 'react'

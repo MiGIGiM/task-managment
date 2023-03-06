@@ -1,4 +1,6 @@
-import { EstimateIcon } from '@components/Icons'
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Listbox, Transition } from '@headlessui/react'
 import { TagIcon } from '@heroicons/react/24/solid'
 import { FC, Fragment } from 'react'
