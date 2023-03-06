@@ -3,5 +3,19 @@
 @tailwind utilities;
 
 .custom-gradient {
-    background: linear-gradient(90deg, rgba(186, 37, 37, 0) 0%, rgba(210, 77, 77, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(186, 37, 37, 0) 0%, rgba(210, 77, 77, 0.1) 100%);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #393d41;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94979a;
 }
